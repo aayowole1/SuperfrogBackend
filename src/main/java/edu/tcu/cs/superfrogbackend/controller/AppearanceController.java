@@ -5,6 +5,7 @@ import edu.tcu.cs.superfrogbackend.domain.Appearance;
 import edu.tcu.cs.superfrogbackend.domain.Result;
 import edu.tcu.cs.superfrogbackend.domain.StatusCode;
 import edu.tcu.cs.superfrogbackend.service.AppearanceService;
+import edu.tcu.cs.superfrogbackend.service.EmailService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping("/appearances")
 public class AppearanceController {
     private AppearanceService appearanceService;
+
 
     public AppearanceController(AppearanceService appearanceService) {
         this.appearanceService = appearanceService;
@@ -47,4 +49,6 @@ public class AppearanceController {
         appearanceService.deleteById(appearanceId);
         return new Result(true, StatusCode.SUCCESS, "Delete Success");
     }
+
+
 }

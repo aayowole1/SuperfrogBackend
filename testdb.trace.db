@@ -4,3 +4,9 @@ ROLES SELECT * FROM APPEARANCE_STUDENTS [42001-200]
 2022-04-24 18:26:59 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "USERS[*] SELECT * FROM USERS"; expected "UPDATE, USE"; SQL statement:
 USERS SELECT * FROM USERS [42001-200]
+2022-04-29 12:07:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO EMAIL(1[*], ""event completed"", ""no-reply"", ""no reply"", ""event"", ""SD"")"; expected "identifier"; SQL statement:
+insert into email(1, "event completed", "no-reply", "no reply", "event", "SD") [42001-200]
+2022-04-29 12:07:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO EMAIL(1[*], 'event completed', 'no-reply', 'no reply', 'event', 'SD')"; expected "identifier"; SQL statement:
+insert into email(1, 'event completed', 'no-reply', 'no reply', 'event', 'SD') [42001-200]

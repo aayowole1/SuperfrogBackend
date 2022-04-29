@@ -5,6 +5,8 @@ import edu.tcu.cs.superfrogbackend.Authentication.Models.Role;
 import edu.tcu.cs.superfrogbackend.Authentication.Models.User;
 import edu.tcu.cs.superfrogbackend.Authentication.Repository.RoleRepository;
 import edu.tcu.cs.superfrogbackend.Authentication.Repository.UserRepository;
+import edu.tcu.cs.superfrogbackend.dao.EmailDao;
+import edu.tcu.cs.superfrogbackend.domain.Email;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,9 +19,12 @@ public class DBDataInitializer implements CommandLineRunner {
     private UserRepository userRepository;
     private RoleRepository roleRepository;
 
-    public DBDataInitializer(UserRepository userRepository, RoleRepository roleRepository) {
+    private EmailDao emailDao;
+
+    public DBDataInitializer(UserRepository userRepository, RoleRepository roleRepository, EmailDao emailDao) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
+        this.emailDao = emailDao;
     }
 
     @Override
@@ -36,5 +41,6 @@ public class DBDataInitializer implements CommandLineRunner {
         s1.setRoles(roles);
         userRepository.save(s1);
 */
+
     }
 }
